@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatNow</title>
+    <link rel="stylesheet" href="css/videos.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">ChatNow</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="videos.html">Videos</a></li>
+
+                <li><a href="login.html">Login</a></li>
+
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- åäÇ íãßäß ÅÒÇáÉ ãÍÊæì ÇáÕÝÍÉ Ãæ ÊÚÏíáå -->
+    <main>
+
+        <div class="video-grid" id="video-grid">
+            <!-- Video templates will be dynamically added here -->
+        </div>
+
+        <!-- Video Player -->
+        <div id="video-player-container" style="display:none;">
+            <video id="video-player" controls style="width:100%; max-width: 800px; margin: 20px auto;">
+                <source id="video-source" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </main>
+
+    <footer>
+  <p>&copy; 2024 ChatNow. All rights reserved</p>
+</footer>
+
+
+    <script src="js/videos.js"></script>
+</body>
+</html>
