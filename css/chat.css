@@ -36,6 +36,33 @@ header nav {
     color: #4e54c8;
 }
 
+/* ÅÚÏÇÏÇÊ áæÖÚ ÇáåÇÊİ */
+@media screen and (max-width: 768px) {
+    header nav {
+        flex-direction: column; /* íÌÚá ÇáÔÑíØ ÚãæÏíğÇ ÚäÏ ÇáåæÇÊİ */
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        margin-bottom: 1rem; /* ÊŞáíá ÇáãÓÇİÉ Èíä ÇááæÌæ æÇáÑæÇÈØ */
+    }
+
+    .nav-links {
+        flex-direction: row; /* ÊÑÊíÈ ÇáÑæÇÈØ ÃİŞíğÇ */
+        gap: 0.8rem; /* ÊŞáíá ÇáãÓÇİÉ Èíä ÇáÑæÇÈØ */
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem; /* ÊŞáíá ÍÌã ÇáäÕ İí æÖÚ ÇáåÇÊİ */
+        padding: 0.5rem 1rem; /* ÊßÈíÑ ÇáÃÒÑÇÑ İí æÖÚ ÇáåÇÊİ */
+    }
+}
+
 
 /* ÊÕãíã æÇÌåÉ ÇáÏÑÏÔÉ */
 .chat-container {
@@ -299,6 +326,24 @@ body {
 .chat-input button:hover {
     background: #0056b3;
 }
+
+/* ÇÓÊÌÇÈÉ ááÌæÇá */
+@media screen and (max-width: 768px) {
+    .chat-container {
+        height: auto;
+        padding: 10px;
+    }
+
+    .chat-input {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chat-input input, .chat-input button {
+        width: 100%;
+    }
+}
+
 
 /* ÊÕãíã ÔÑíØ ÍŞæŞ ÇáãáßíÉ */
 footer {
