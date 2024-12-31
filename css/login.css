@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url('https://i.postimg.cc/KcBTn2hD/cool-background.png');
+    background: url('https://images.unsplash.com/photo-1531259683007-016a7b628fc3');
     background-size: cover; /* ·Ã⁄· «·’Ê—…  €ÿÌ ﬂ«„· «·Œ·›Ì… */
     background-position: center center; /* ·÷„«‰ √‰ «·’Ê—…  ﬂÊ‰ ›Ì «·„‰ ’› */
     color: white;
@@ -194,5 +194,66 @@ header nav {
     .cta-button {
         padding: 0.8rem 1.8rem; /*  ’€Ì— «·√“—«— */
         font-size: 1.1rem; /*  ’€Ì— ÕÃ„ «·‰’ */
+    }
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(20, 20, 25, 1);
+}
+
+body,
+html {
+    overflow-x: hidden;
+    width: 100vw;
+    height: auto;
+}
+
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes diagonal-fall {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.25;
+        transform: translate(10vw, 100vh);
     }
 }
