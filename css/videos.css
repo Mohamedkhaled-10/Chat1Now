@@ -1,4 +1,4 @@
-/* ÅÚÏÇÏÇÊ ÚÇãÉ */
+/* إعدادات عامة */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* ÔÑíØ ÇáÊäÞá */
+/* شريط التنقل */
 header nav {
     display: flex;
     justify-content: space-between;
@@ -53,7 +53,7 @@ header nav {
     margin: 0 auto;
 }
 
-/* ÊØÈíÞ ÕæÑÉ ßÎáÝíÉ ááÕÝÍÉ */
+/* تطبيق صورة كخلفية للصفحة */
 body {
     background: url('https://images.unsplash.com/photo-1531259683007-016a7b628fc3') no-repeat center center fixed;
     background-size: cover;
@@ -61,62 +61,63 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* ÊÕãíã ÇáÔÈßÉ áÚÑÖ ÇáÞæÇáÈ */
+/* تصميم الشبكة لعرض القوالب */
 .video-grid {
-    display: grid; /* ÇÓÊÎÏÇã Grid áÊæÒíÚ ÇáÞæÇáÈ */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ÇáÊæÒíÚ ÇáÊáÞÇÆí */
-    gap: 20px; /* ãÓÇÝÇÊ Èíä ÇáÞæÇáÈ */
-    justify-content: center; /* ÌÚá ÇáÞæÇáÈ Ýí ãäÊÕÝ ÇáÕÝÍÉ */
-    align-items: start; /* ãäÚ ÇáÊãÏÏ ÇáÚãæÏí */
-    padding: 50px; /* ãÓÇÝÉ ÏÇÎáíÉ */
+    display: grid; /* استخدام Grid لتوزيع القوالب */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* التوزيع التلقائي */
+    gap: 20px; /* مسافات بين القوالب */
+    justify-content: center; /* جعل القوالب في منتصف الصفحة */
+    align-items: start; /* منع التمدد العمودي */
+    padding: 50px; /* مسافة داخلية */
 }
 
-/* ÊÕãíã ÍÇæíÉ ÇáÝíÏíæ */
+/* تصميم حاوية الفيديو */
 .video-card {
-    background: white; /* áæä ÇáÎáÝíÉ */
-    border-radius: 15px; /* ÒæÇíÇ ÏÇÆÑíÉ */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ùá ÎÝíÝ */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* ÊÃËíÑ ÇáÊÍæáÇÊ */
-    overflow: hidden; /* ÊËÈíÊ ÇáãÍÊæì */
-    width: 100%; /* ÇáÚÑÖ ÇáßÇãá */
-    max-width: 300px; /* ÊÍÏíÏ ÃÞÕì ÚÑÖ ááÞÇáÈ */
-    margin: 0 auto; /* ÇáÊæÓíØ */
-    text-align: center; /* ÊäÓíÞ ÇáäÕæÕ Ýí ÇáãäÊÕÝ */
+    background: white; /* لون الخلفية */
+    border-radius: 15px; /* زوايا دائرية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير التحولات */
+    overflow: hidden; /* تثبيت المحتوى */
+    width: 100%; /* العرض الكامل */
+    max-width: 300px; /* تحديد أقصى عرض للقالب */
+    margin: 0 auto; /* التوسيط */
+    text-align: center; /* تنسيق النصوص في المنتصف */
 }
 
-/* ÊÃËíÑ hover Úáì ÇáÞÇáÈ */
+/* تحسين شكل قوالب الفيديو */
+.video-card {
+    background: linear-gradient(135deg, #000710, #012654); /* خلفية متدرجة حديثة */
+    border-radius: 15px; /* زوايا دائرية */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* ظل أكثر عمقًا */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير التحولات */
+    overflow: hidden; /* تثبيت المحتوى داخل القالب */
+    width: 100%; /* العرض الكامل */
+    max-width: 300px; /* تحديد أقصى عرض للقالب */
+    margin: 0 auto; /* التوسيط */
+    text-align: center; /* تنسيق النصوص في المنتصف */
+    padding: 15px; /* مسافات داخلية */
+}
+
+/* تأثير hover على القالب */
 .video-card:hover {
-    transform: translateY(-10px) scale(1.05); /* ÑÝÚ æÒíÇÏÉ ÇáÍÌã */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Ùá ÃßËÑ æÖæÍðÇ */
+    transform: translateY(-8px) scale(1.08); /* رفع وزيادة الحجم عند تمرير الماوس */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25); /* ظل أكثر وضوحًا */
 }
 
-/* ÊÃËíÑÇÊ */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* ÊÕãíã ÇáÕæÑÉ ÏÇÎá ÇáÞÇáÈ */
+/* تحسين الصورة داخل القالب */
 .video-thumbnail {
-    width: 100%; /* ÚÑÖ ÇáÕæÑÉ ãÊæÇÝÞ ãÚ ÇáÞÇáÈ */
-    border-radius: 12px; /* ÒæÇíÇ ãÓÊÏíÑÉ */
-    transition: transform 0.3s ease, filter 0.3s ease; /* ÊÃËíÑ ÇáÊßÈíÑ æÇáÊÝÊíÍ */
+    width: 100%; /* العرض متوافق مع القالب */
+    border-radius: 10px; /* زوايا مستديرة */
+    transition: transform 0.3s ease, filter 0.3s ease; /* تأثير التكبير والتفتيح */
 }
 
-/* ÊÃËíÑ hover Úáì ÇáÕæÑÉ */
+/* تأثير hover على الصورة */
 .video-card:hover .video-thumbnail {
-    transform: scale(1.05); /* ÊßÈíÑ ÈÓíØ */
-    filter: brightness(1.1); /* ÊÝÊíÍ Çááæä */
+    transform: scale(1.08); /* تكبير بسيط للصورة */
+    filter: brightness(1.2); /* زيادة الإضاءة */
 }
 
-/* ÊÃËíÑÇÊ */
+/* تأثيرات */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -129,15 +130,21 @@ body {
 }
 
 
-/* ÚäæÇä ÇáÝíÏíæ */
+/* تحسين عنوان الفيديو */
 .video-title {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #333;
-    font-weight: bold; /* ÅÖÇÝÉ ÓãÇßÉ ááÎØ */
+    margin-top: 12px;
+    font-size: 1.4rem; /* حجم خط أكبر */
+    color: #ffffff; /* لون أبيض للنص */
+    font-weight: bold; /* جعل الخط أكثر سماكة */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* ظل للنص */
 }
 
-/* ÊäÓíÞ ãÔÛá ÇáÝíÏíæ ÇáÚÕÑí */
+/* تأثير اضاءة الخط عند التمرير */
+.video-card:hover .video-title {
+    text-shadow: 0 0 15px #ffffff, 0 0 30px #4e54c8;
+}
+
+/* تنسيق مشغل الفيديو العصري */
 #video-container {
     width: 70%;
     height: 70vh;
@@ -192,26 +199,26 @@ body {
     }
 }
 
-/* ÊÕãíã ÔÑíØ ÍÞæÞ ÇáãáßíÉ */
+/* تصميم شريط حقوق الملكية */
 footer {
-  background-color: #0d0d0d; /* Çááæä ÇáÎáÝí */
-  color: white; /* áæä ÇáäÕ */
-  text-align: center; /* ÊæÓíØ ÇáäÕ */
-  padding: 30px 0; /* ÇáãÓÇÝÇÊ ÇáÏÇÎáíÉ */
-  position: fixed; /* ÊËÈíÊ ÇáÔÑíØ Ýí ÇáÃÓÝá */
-  bottom: 0; /* ÊÍÏíÏ ãßÇäå Ýí ÇáÃÓÝá */
-  width: 100%; /* ÌÚá ÇáÔÑíØ ÈÚÑÖ ÇáÕÝÍÉ */
-  border-top-left-radius: 50px; /* ÇáÒæÇíÇ ÇáÏÇÆÑíÉ ãä ÇáÌåÉ ÇáÚáíÇ ÇáíÓÑì */
-  border-top-right-radius: 50px; /* ÇáÒæÇíÇ ÇáÏÇÆÑíÉ ãä ÇáÌåÉ ÇáÚáíÇ Çáíãäì */
-  font-size: 1rem; /* ÍÌã ÇáÎØ */
-  z-index: 9999; /* ÇáÊÃßÏ ãä ÈÞÇÁ ÇáÔÑíØ ÝæÞ ÇáÚäÇÕÑ ÇáÃÎÑì */
+  background-color: #0d0d0d; /* اللون الخلفي */
+  color: white; /* لون النص */
+  text-align: center; /* توسيط النص */
+  padding: 30px 0; /* المسافات الداخلية */
+  position: fixed; /* تثبيت الشريط في الأسفل */
+  bottom: 0; /* تحديد مكانه في الأسفل */
+  width: 100%; /* جعل الشريط بعرض الصفحة */
+  border-top-left-radius: 50px; /* الزوايا الدائرية من الجهة العليا اليسرى */
+  border-top-right-radius: 50px; /* الزوايا الدائرية من الجهة العليا اليمنى */
+  font-size: 1rem; /* حجم الخط */
+  z-index: 9999; /* التأكد من بقاء الشريط فوق العناصر الأخرى */
 }
 
 footer p {
-  margin: 0; /* ÅÒÇáÉ ÇáãÓÇÝÉ ÇáÚáæíÉ æÇáÓÝáíÉ */
+  margin: 0; /* إزالة المسافة العلوية والسفلية */
 }
 
-/* ÊäÓíÞÇÊ ÇáÔÇÔÇÊ ÇáÕÛíÑÉ */
+/* تنسيقات الشاشات الصغيرة */
 @media (max-width: 768px) {
     header nav {
         flex-direction: row;
