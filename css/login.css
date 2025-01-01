@@ -1,4 +1,4 @@
-/* ≈⁄œ«œ«  ⁄«„… */
+/* √Ö√ö√è√á√è√á√ä √ö√á√£√â */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +8,8 @@
 
 body {
     background: url('https://images.unsplash.com/photo-1531259683007-016a7b628fc3');
-    background-size: cover; /* ·Ã⁄· «·’Ê—…  €ÿÌ ﬂ«„· «·Œ·›Ì… */
-    background-position: center center; /* ·÷„«‰ √‰ «·’Ê—…  ﬂÊ‰ ›Ì «·„‰ ’› */
+    background-size: cover; /* √°√å√ö√° √á√°√ï√¶√ë√â √ä√õ√ò√≠ √ü√á√£√° √á√°√é√°√ù√≠√â */
+    background-position: center center; /* √°√ñ√£√á√§ √É√§ √á√°√ï√¶√ë√â √ä√ü√¶√§ √ù√≠ √á√°√£√§√ä√ï√ù */
     color: white;
     text-align: center;
     height: 100vh;
@@ -19,7 +19,7 @@ body {
     align-items: center;
 }
 
-/* ‘—Ìÿ «· ‰ﬁ· */
+/* √î√ë√≠√ò √á√°√ä√§√û√° */
 header nav {
     display: flex;
     justify-content: space-between;
@@ -31,14 +31,14 @@ header nav {
     left: 0;
 }
 
-/* «··ÊÃÊ */
+/* √á√°√°√¶√å√¶ */
 .logo {
     color: #FFFFFF;
     font-size: 2rem;
     font-weight: bold;
 }
 
-/* —Ê«»ÿ «· ‰ﬁ· */
+/* √ë√¶√á√à√ò √á√°√ä√§√û√° */
 .nav-links {
     list-style: none;
     display: flex;
@@ -65,21 +65,21 @@ header nav {
     color: #4e54c8;
 }
 
-/* ≈⁄œ«œ«  ·Ê÷⁄ «·Â« › */
+/* √Ö√ö√è√á√è√á√ä √°√¶√ñ√ö √á√°√•√á√ä√ù */
 @media screen and (max-width: 768px) {
     header nav {
-        flex-direction: column; /* ÌÃ⁄· «·‘—Ìÿ ⁄„ÊœÌ« ⁄‰œ «·ÂÊ« › */
+        flex-direction: column; /* √≠√å√ö√° √á√°√î√ë√≠√ò √ö√£√¶√è√≠√∞√á √ö√§√è √á√°√•√¶√á√ä√ù */
         align-items: center;
     }
 
     .logo {
         font-size: 1.5rem;
-        margin-bottom: 1rem; /*  ﬁ·Ì· «·„”«›… »Ì‰ «··ÊÃÊ Ê«·—Ê«»ÿ */
+        margin-bottom: 1rem; /* √ä√û√°√≠√° √á√°√£√ì√á√ù√â √à√≠√§ √á√°√°√¶√å√¶ √¶√á√°√ë√¶√á√à√ò */
     }
 
     .nav-links {
-        flex-direction: row; /*  — Ì» «·—Ê«»ÿ √›ﬁÌ« */
-        gap: 0.8rem; /*  ﬁ·Ì· «·„”«›… »Ì‰ «·—Ê«»ÿ */
+        flex-direction: row; /* √ä√ë√ä√≠√à √á√°√ë√¶√á√à√ò √É√ù√û√≠√∞√á */
+        gap: 0.8rem; /* √ä√û√°√≠√° √á√°√£√ì√á√ù√â √à√≠√§ √á√°√ë√¶√á√à√ò */
     }
 
     .nav-links li {
@@ -87,12 +87,12 @@ header nav {
     }
 
     .nav-links a {
-        font-size: 1.1rem; /*  ﬁ·Ì· ÕÃ„ «·‰’ ›Ì Ê÷⁄ «·Â« › */
-        padding: 0.5rem 1rem; /*  ﬂ»Ì— «·√“—«— ›Ì Ê÷⁄ «·Â« › */
+        font-size: 1.1rem; /* √ä√û√°√≠√° √ç√å√£ √á√°√§√ï √ù√≠ √¶√ñ√ö √á√°√•√á√ä√ù */
+        padding: 0.5rem 1rem; /* √ä√ü√à√≠√ë √á√°√É√í√ë√á√ë √ù√≠ √¶√ñ√ö √á√°√•√á√ä√ù */
     }
 }
 
-/* ‰«›–…  ”ÃÌ· «·œŒÊ· */
+/* √§√á√ù√ê√â √ä√ì√å√≠√° √á√°√è√é√¶√° */
 .welcome-section {
     background: #171717;
     padding: 3rem 4rem;
@@ -175,25 +175,25 @@ header nav {
     transform: scale(1.05);
 }
 
-/* ≈⁄œ«œ«  ·Ê÷⁄ «·Â« › */
+/* √Ö√ö√è√á√è√á√ä √°√¶√ñ√ö √á√°√•√á√ä√ù */
 @media screen and (max-width: 768px) {
     .welcome-section {
-        padding: 2rem; /*  ﬁ·Ì· padding */
-        width: 100%; /*  ’€Ì— «·⁄—÷ */
-        max-width: 100%; /*  ÕœÌœ «·Õœ «·√ﬁ’Ï ··⁄—÷ */
+        padding: 2rem; /* √ä√û√°√≠√° padding */
+        width: 100%; /* √ä√ï√õ√≠√ë √á√°√ö√ë√ñ */
+        max-width: 100%; /* √ä√ç√è√≠√è √á√°√ç√è √á√°√É√û√ï√¨ √°√°√ö√ë√ñ */
     }
 
     .welcome-section h1 {
-        font-size: 2rem; /*  ’€Ì— ÕÃ„ «·⁄‰Ê«‰ */
+        font-size: 2rem; /* √ä√ï√õ√≠√ë √ç√å√£ √á√°√ö√§√¶√á√§ */
     }
 
     .login-form input {
-        padding: 0.7rem; /*  ﬁ·Ì· ÕÃ„ «·ÕﬁÊ· */
+        padding: 0.7rem; /* √ä√û√°√≠√° √ç√å√£ √á√°√ç√û√¶√° */
     }
 
     .cta-button {
-        padding: 0.8rem 1.8rem; /*  ’€Ì— «·√“—«— */
-        font-size: 1.1rem; /*  ’€Ì— ÕÃ„ «·‰’ */
+        padding: 0.8rem 1.8rem; /* √ä√ï√õ√≠√ë √á√°√É√í√ë√á√ë */
+        font-size: 1.1rem; /* √ä√ï√õ√≠√ë √ç√å√£ √á√°√§√ï */
     }
 }
 
@@ -201,7 +201,7 @@ body,
 html {
     margin: 0;
     padding: 0;
-    background-color: rgba(20, 20, 25, 1);
+    background-color: rgba();
 }
 
 body,
