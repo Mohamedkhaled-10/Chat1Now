@@ -1,9 +1,11 @@
 const videoData = [
     { title: "Robert Dawny JR back to MCU", thumbnail: "https://i0.wp.com/www.thewrap.com/wp-content/uploads/2024/07/robert-downey-jr-comic-con-doctor-doom.jpg?fit=990%2C557&ssl=1", videoPage: "https://c.top4top.io/m_32768lmkk2.mp4" },
     
-{ title: "Superman-Justice league Zack Snyder", thumbnail: "https://i.ytimg.com/vi/o4gG8onLOyc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBkQuqxwGX9eSvKX95SxdoLYF5ojQ", videoPage: "https://b.top4top.io/m_32760ee1a1.mp4" },
+{ title: "Superman-Justice league Zack Snyder", thumbnail: "https://i.ytimg.com/vi/o4gG8onLOyc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBkQuqxwGX9eSvKX95SxdoLYF5ojQ", videoPage: "https://i.top4top.io/m_32882jxad1.mp4" },
 
-{ title: "Supergirl and The Flash-The Flash 2023", thumbnail: "https://theactionelite.com/wp-content/uploads/2023/06/The-Flash.jpg", videoPage: "https://a.top4top.io/m_32767un921.mp4" }
+{ title: "Supergirl and The Flash-The Flash 2023", thumbnail: "https://theactionelite.com/wp-content/uploads/2023/06/The-Flash.jpg", videoPage: "https://a.top4top.io/m_32767un921.mp4" },
+
+{ title: "Superman | Official Teaser Trailer", thumbnail: "https://img.youtube.com/vi/uhUht6vAsMY/maxresdefault.jpg", videoPage: "https://a.top4top.io/m_3288gmz5g0.mp4" }
 
 ];
 
@@ -25,7 +27,7 @@ videoData.forEach(video => {
 });
 
 function showVideoPlayer(videoSrc) {
-    // ÅäÔÇÁ ÚäÇÕÑ ÇáãÔÛá ÏíäÇãíßíðÇ
+    // Ø¥Ù†Ø´Ø§Ø¡ Ø¹Ù†Ø§ØµØ± Ø§Ù„Ù…Ø´ØºÙ„ Ø¯ÙŠÙ†Ø§Ù…ÙŠÙƒÙŠÙ‹Ø§
     const videoContainer = document.createElement("div");
     videoContainer.id = "video-container";
     videoContainer.innerHTML = `
@@ -36,11 +38,12 @@ function showVideoPlayer(videoSrc) {
     document.body.appendChild(videoContainer);
     videoContainer.style.display = "flex";
 
-    // ÅÛáÇÞ ÇáãÔÛá ÚäÏ ÇáäÞÑ Úáì ÒÑ ÇáÅÛáÇÞ
+    // Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„Ù…Ø´ØºÙ„ Ø¹Ù†Ø¯ Ø§Ù„Ù†Ù‚Ø± Ø¹Ù„Ù‰ Ø²Ø± Ø§Ù„Ø¥ØºÙ„Ø§Ù‚
     document.getElementById("close-btn").addEventListener("click", () => {
         videoContainer.remove();
     });
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const snowContainer = document.querySelector(".snow-container");
