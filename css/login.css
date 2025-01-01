@@ -1,4 +1,64 @@
-/* ÅÚÏÇÏÇÊ ÚÇãÉ */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(20, 20, 25, 1);
+}
+
+body,
+html {
+    overflow-x: hidden;
+    width: 100vw;
+    height: auto;
+}
+
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes diagonal-fall {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.25;
+        transform: translate(10vw, 100vh);
+    }
+}
+/* إعدادات عامة */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +68,8 @@
 
 body {
     background: url('https://images.unsplash.com/photo-1531259683007-016a7b628fc3');
-    background-size: cover; /* áÌÚá ÇáÕæÑÉ ÊÛØí ßÇãá ÇáÎáÝíÉ */
-    background-position: center center; /* áÖãÇä Ãä ÇáÕæÑÉ Êßæä Ýí ÇáãäÊÕÝ */
+    background-size: cover; /* لجعل الصورة تغطي كامل الخلفية */
+    background-position: center center; /* لضمان أن الصورة تكون في المنتصف */
     color: white;
     text-align: center;
     height: 100vh;
@@ -19,7 +79,7 @@ body {
     align-items: center;
 }
 
-/* ÔÑíØ ÇáÊäÞá */
+/* شريط التنقل */
 header nav {
     display: flex;
     justify-content: space-between;
@@ -31,14 +91,14 @@ header nav {
     left: 0;
 }
 
-/* ÇááæÌæ */
+/* اللوجو */
 .logo {
     color: #FFFFFF;
     font-size: 2rem;
     font-weight: bold;
 }
 
-/* ÑæÇÈØ ÇáÊäÞá */
+/* روابط التنقل */
 .nav-links {
     list-style: none;
     display: flex;
@@ -65,21 +125,21 @@ header nav {
     color: #4e54c8;
 }
 
-/* ÅÚÏÇÏÇÊ áæÖÚ ÇáåÇÊÝ */
+/* إعدادات لوضع الهاتف */
 @media screen and (max-width: 768px) {
     header nav {
-        flex-direction: column; /* íÌÚá ÇáÔÑíØ ÚãæÏíðÇ ÚäÏ ÇáåæÇÊÝ */
+        flex-direction: column; /* يجعل الشريط عموديًا عند الهواتف */
         align-items: center;
     }
 
     .logo {
         font-size: 1.5rem;
-        margin-bottom: 1rem; /* ÊÞáíá ÇáãÓÇÝÉ Èíä ÇááæÌæ æÇáÑæÇÈØ */
+        margin-bottom: 1rem; /* تقليل المسافة بين اللوجو والروابط */
     }
 
     .nav-links {
-        flex-direction: row; /* ÊÑÊíÈ ÇáÑæÇÈØ ÃÝÞíðÇ */
-        gap: 0.8rem; /* ÊÞáíá ÇáãÓÇÝÉ Èíä ÇáÑæÇÈØ */
+        flex-direction: row; /* ترتيب الروابط أفقيًا */
+        gap: 0.8rem; /* تقليل المسافة بين الروابط */
     }
 
     .nav-links li {
@@ -87,12 +147,12 @@ header nav {
     }
 
     .nav-links a {
-        font-size: 1.1rem; /* ÊÞáíá ÍÌã ÇáäÕ Ýí æÖÚ ÇáåÇÊÝ */
-        padding: 0.5rem 1rem; /* ÊßÈíÑ ÇáÃÒÑÇÑ Ýí æÖÚ ÇáåÇÊÝ */
+        font-size: 1.1rem; /* تقليل حجم النص في وضع الهاتف */
+        padding: 0.5rem 1rem; /* تكبير الأزرار في وضع الهاتف */
     }
 }
 
-/* äÇÝÐÉ ÊÓÌíá ÇáÏÎæá */
+/* نافذة تسجيل الدخول */
 .welcome-section {
     background: #171717;
     padding: 3rem 4rem;
@@ -175,85 +235,26 @@ header nav {
     transform: scale(1.05);
 }
 
-/* ÅÚÏÇÏÇÊ áæÖÚ ÇáåÇÊÝ */
+/* إعدادات لوضع الهاتف */
 @media screen and (max-width: 768px) {
     .welcome-section {
-        padding: 2rem; /* ÊÞáíá padding */
-        width: 100%; /* ÊÕÛíÑ ÇáÚÑÖ */
-        max-width: 100%; /* ÊÍÏíÏ ÇáÍÏ ÇáÃÞÕì ááÚÑÖ */
+        padding: 2rem; /* تقليل padding */
+        width: 100%; /* تصغير العرض */
+        max-width: 100%; /* تحديد الحد الأقصى للعرض */
     }
 
     .welcome-section h1 {
-        font-size: 2rem; /* ÊÕÛíÑ ÍÌã ÇáÚäæÇä */
+        font-size: 2rem; /* تصغير حجم العنوان */
     }
 
     .login-form input {
-        padding: 0.7rem; /* ÊÞáíá ÍÌã ÇáÍÞæá */
+        padding: 0.7rem; /* تقليل حجم الحقول */
     }
 
     .cta-button {
-        padding: 0.8rem 1.8rem; /* ÊÕÛíÑ ÇáÃÒÑÇÑ */
-        font-size: 1.1rem; /* ÊÕÛíÑ ÍÌã ÇáäÕ */
+        padding: 0.8rem 1.8rem; /* تصغير الأزرار */
+        font-size: 1.1rem; /* تصغير حجم النص */
     }
 }
 
-body,
-html {
-    margin: 0;
-    padding: 0;
-    background-color: rgba();
-}
 
-body,
-html {
-    overflow-x: hidden;
-    width: 100vw;
-    height: auto;
-}
-
-.snow-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    z-index: 99999;
-    pointer-events: none;
-}
-
-.snowflake {
-    position: absolute;
-    background-color: white;
-    border-radius: 50%;
-    opacity: 0.8;
-    pointer-events: none;
-}
-
-@keyframes fall {
-    0% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-    10% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.5;
-        transform: translateY(100vh);
-    }
-}
-
-@keyframes diagonal-fall {
-    0% {
-        opacity: 0;
-        transform: translate(0, 0);
-    }
-    10% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.25;
-        transform: translate(10vw, 100vh);
-    }
-}
