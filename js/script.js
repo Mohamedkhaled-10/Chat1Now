@@ -1,81 +1,40 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const snowContainer = document.querySelector(".snow-container");
+// التحقق إذا كان هناك تاريخ نهاية محفوظ في Local Storage
+let countdownEndDate = localStorage.getItem('countdownEndDate');
 
-    const particlesPerThousandPixels = 0.1;
-    const fallSpeed = 1.25;
-    const pauseWhenNotActive = true;
-    const maxSnowflakes = 200;
-    const snowflakes = [];
+// إذا لم يكن هناك تاريخ محفوظ، يتم تعيين تاريخ جديد بعد 194 يومًا
+if (!countdownEndDate) {
+    const countdownDate = new Date();
+    countdownDate.setDate(countdownDate.getDate() + 194); // إضافة 194 يومًا
+    countdownEndDate = countdownDate.getTime();
+    localStorage.setItem('countdownEndDate', countdownEndDate); // تخزين التاريخ في المتصفح
+}
 
-    let snowflakeInterval;
-    let isTabActive = true;
+// تحديث العداد
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = countdownEndDate - now;
 
-    function resetSnowflake(snowflake) {
-        const size = Math.random() * 5 + 1;
-        const viewportWidth = window.innerWidth - size; // Adjust for snowflake size
-        const viewportHeight = window.innerHeight;
+    // حساب الأيام والساعات والدقائق والثواني
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        snowflake.style.width = `${size}px`;
-        snowflake.style.height = `${size}px`;
-        snowflake.style.left = `${Math.random() * viewportWidth}px`; // Constrain within viewport width
-        snowflake.style.top = `-${size}px`;
+    // تحديث النصوص
+    document.getElementById('countdown').innerHTML = `
+        <span>${days} يوم</span>
+        <span>${hours} ساعة</span>
+        <span>${minutes} دقيقة</span>
+        <span>${seconds} ثانية</span>
+    `;
 
-        const animationDuration = (Math.random() * 3 + 2) / fallSpeed;
-        snowflake.style.animationDuration = `${animationDuration}s`;
-        snowflake.style.animationTimingFunction = "linear";
-        snowflake.style.animationName =
-            Math.random() < 0.5 ? "fall" : "diagonal-fall";
-
-        setTimeout(() => {
-            if (parseInt(snowflake.style.top, 10) < viewportHeight) {
-                resetSnowflake(snowflake);
-            } else {
-                snowflake.remove(); // Remove when it goes off the bottom edge
-            }
-        }, animationDuration * 1000);
+    // التوجيه عند انتهاء العداد
+    if (distance < 0) {
+        clearInterval(timer);
+        localStorage.removeItem('countdownEndDate'); // إزالة التاريخ بعد انتهاء العداد
+        window.location.href = 'index.html'; // توجيه للموقع الأساسي
     }
+}
 
-    function createSnowflake() {
-        if (snowflakes.length < maxSnowflakes) {
-            const snowflake = document.createElement("div");
-            snowflake.classList.add("snowflake");
-            snowflakes.push(snowflake);
-            snowContainer.appendChild(snowflake);
-            resetSnowflake(snowflake);
-        }
-    }
-
-    function generateSnowflakes() {
-        const numberOfParticles =
-            Math.ceil((window.innerWidth * window.innerHeight) / 1000) *
-            particlesPerThousandPixels;
-        const interval = 5000 / numberOfParticles;
-
-        clearInterval(snowflakeInterval);
-        snowflakeInterval = setInterval(() => {
-            if (isTabActive && snowflakes.length < maxSnowflakes) {
-                requestAnimationFrame(createSnowflake);
-            }
-        }, interval);
-    }
-
-    function handleVisibilityChange() {
-        if (!pauseWhenNotActive) return;
-
-        isTabActive = !document.hidden;
-        if (isTabActive) {
-            generateSnowflakes();
-        } else {
-            clearInterval(snowflakeInterval);
-        }
-    }
-
-    generateSnowflakes();
-
-    window.addEventListener("resize", () => {
-        clearInterval(snowflakeInterval);
-        setTimeout(generateSnowflakes, 1000);
-    });
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-});
+// تحديث العد كل ثانية
+const timer = setInterval(updateCountdown, 1000);
